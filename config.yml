@@ -1,0 +1,131 @@
+title: Status
+
+# Should posts, which have a publish date
+# from the future, be built? Useful for
+# sharing upcoming maintenance, etc.
+buildFuture: true
+
+# What language do you want to use for the
+# html[lang] definition?
+languageCode: en
+defaultContentLanguage: en
+
+# What is the hostname or path to the root?
+# Where is the site hosted?
+baseURL: http://localhost
+
+# For features like Last modified, you
+# need to use a Git repository.
+enableGitInfo: false
+
+params:
+  categories:
+    - name: East
+      description: The main servers are located here.
+      closed: false
+      untitled: false
+    - name: Uncategorized
+      untitled: true
+
+  systems:
+    - name: Backend
+      category: East
+    - name: Frontend
+      description: This is the East Frontend.
+      category: East
+    - name: Website
+      description: The web frontend for the application.
+      category: Uncategorized
+      histogram: false
+      link: https://halect2.github.io/
+    - name: API
+      description: The guts of the application.
+      category: Uncategorized
+
+  # What date format to use?
+  # dateFormat Default: "January 2, 2006 at 3:04 PM"
+  # shortDateFormat Default: "15:04 — Jan 2"
+  dateFormat: January 2, 2006 at 3:04 PM
+  shortDateFormat: 15:04 — Jan 2
+
+  # Should relative time (x min ago) be used?
+  #
+  # IMPORTANT: In the frontmatter, the dates MUST be in
+  # the UTC time zone for this to work properly.
+  useRelativeTime: true
+
+  # What header design should we use?
+  useLargeHeaderDesign: false
+
+  # Should incident history be separated
+  # in the archive view by year or month?
+  incidentHistoryFormat: "monthly"
+
+  # Should we show the logo or the title
+  # of the status page?
+  useLogo: true
+  logo: logo.png
+
+  # This is the description that is shown
+  # on the footer and meta tags.
+  description: Static Status Page for Services
+
+  # Tabs on homepage
+  # Uncomment to enable.
+  #
+  Format:
+  customTabs:
+   -
+     name: GitHub
+     link: https://github.com/HaleCT2
+
+  # Disable complex server-side
+  # calculations that may impact
+  # your build performance
+  disableComplexCalculations: false
+
+  # Incident posts shown on homepage
+  incidentPostsPerPage: 5
+
+  # Colors throughout cState
+  brand: "#0a0c0f"
+  ok: "#008000"
+  disrupted: "#cc4400"
+  down: "#e60000"
+  notice: "#24478f"
+
+  alwaysKeepBrandColor: true
+
+# These options affect the core of cState.
+# Please do not change them if you do not
+# know what you are doing.
+theme: cstate
+
+preserveTaxonomyNames: true
+
+taxonomies:
+  affected: affected
+
+outputs:
+  page:
+    - html
+    - json
+  section:
+    - html
+    - json
+    - rss
+  home:
+    - html
+    - json
+    - rss
+    - svg
+  term:
+    - html
+    - json
+    - rss
+    - svg
+
+outputFormats:
+  svg:
+    isPlainText: true
+    mediaType: image/svg+xml
