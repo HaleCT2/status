@@ -12,15 +12,17 @@ defaultContentLanguage: en
 
 # What is the hostname or path to the root?
 # Where is the site hosted?
-baseURL: http://localhost
+baseURL: https://halect2.github.io/status/
 
 # For features like Last modified, you
 # need to use a Git repository.
 enableGitInfo: false
 
 params:
+  enableCustomHTML: true
+
   categories:
-    - name: East
+    - name: Home Server
       description: The main servers are located here.
       closed: false
       untitled: false
@@ -28,18 +30,19 @@ params:
       untitled: true
 
   systems:
-    - name: Backend
-      category: East
-    - name: Frontend
-      description: This is the East Frontend.
-      category: East
+    - name: Home Lab
+      category: Home Server
+    - name: Portfolio Site
+      description: This is the my Website.
+      category: Home Server
+      link: https://halecarter.com/
     - name: Website
-      description: The web frontend for the application.
+      description: The web frontend for GitHub Pages.
       category: Uncategorized
       histogram: false
       link: https://halect2.github.io/
     - name: API
-      description: The guts of the application.
+      description: The fictional guts of the application.
       category: Uncategorized
 
   # What date format to use?
@@ -63,12 +66,12 @@ params:
 
   # Should we show the logo or the title
   # of the status page?
-  useLogo: true
-  logo: logo.png
+  useLogo: false
+  # logo: logo.png
 
   # This is the description that is shown
   # on the footer and meta tags.
-  description: Static Status Page for Services
+  description: Static Status Page for Services; updated via Automation Triggers.
 
   # Tabs on homepage
   # Uncomment to enable.
@@ -82,7 +85,7 @@ params:
   # Disable complex server-side
   # calculations that may impact
   # your build performance
-  disableComplexCalculations: false
+  disableComplexCalculations: true
 
   # Incident posts shown on homepage
   incidentPostsPerPage: 5
